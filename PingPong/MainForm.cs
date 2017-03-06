@@ -3,6 +3,8 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 using System.Runtime.Serialization.Json;
+using Firebase.Database;
+using System.Threading.Tasks;
 
 namespace PingPong
 {
@@ -44,6 +46,25 @@ namespace PingPong
             // Clean up the streams and the response.  
             dataStream.Close();
             response.Close();
+        }
+
+        private void firebasedatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QueryFB();
+        }
+
+        private async Task QueryFB()
+        {
+            var firebase = new FirebaseClient("https://pingpong-f6fb0.firebaseio.com/");
+
+            var jugadors = await firebase
+             .Child("jugadors")
+             .OnceAsync<Jugador>();
+
+            foreach (var p1 in jugadors)
+            {
+                MessageBox.Show(p1.Key + " -> " + p1.Object.ToString());
+            }
         }
     }
 }

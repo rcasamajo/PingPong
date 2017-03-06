@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fitxerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firebasedatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,17 +48,25 @@
             // fitxerToolStripMenuItem
             // 
             this.fitxerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem});
+            this.testToolStripMenuItem,
+            this.firebasedatabaseToolStripMenuItem});
             this.fitxerToolStripMenuItem.Name = "fitxerToolStripMenuItem";
-            this.fitxerToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.fitxerToolStripMenuItem.Text = "Fitxer";
+            this.fitxerToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fitxerToolStripMenuItem.Text = "Proves";
             // 
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.testToolStripMenuItem.Text = "DataContractJsonSerializer";
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            // 
+            // firebasedatabaseToolStripMenuItem
+            // 
+            this.firebasedatabaseToolStripMenuItem.Name = "firebasedatabaseToolStripMenuItem";
+            this.firebasedatabaseToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.firebasedatabaseToolStripMenuItem.Text = "FirebaseDatabase";
+            this.firebasedatabaseToolStripMenuItem.Click += new System.EventHandler(this.firebasedatabaseToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -80,6 +89,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fitxerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firebasedatabaseToolStripMenuItem;
     }
 }
 
