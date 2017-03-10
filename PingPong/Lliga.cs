@@ -27,5 +27,21 @@ namespace PingPong
             else
                 return null;
         }
+
+        public void delJugador(int i)
+        {
+            if (i < Jugadors.Count)
+                Jugadors.RemoveAt(i);
+        }
+
+        public override String ToString()
+        {
+            String msg = "";
+
+            foreach (Jugador jug in Jugadors)
+                msg = msg + jug.ToString() + "\n";
+
+            return msg;
+        }
     }
 }

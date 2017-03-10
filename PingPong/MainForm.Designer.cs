@@ -31,10 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fitxerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.llegirRESTMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.llegirFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MostrarJugadorsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.escripturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             this.fitxerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.llegirRESTMenuItem,
-            this.llegirFDMenuItem});
+            this.MostrarJugadorsMenuItem});
             this.fitxerToolStripMenuItem.Name = "fitxerToolStripMenuItem";
             this.fitxerToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.fitxerToolStripMenuItem.Text = "Lectura";
@@ -61,22 +62,23 @@
             // llegirRESTMenuItem
             // 
             this.llegirRESTMenuItem.Name = "llegirRESTMenuItem";
-            this.llegirRESTMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.llegirRESTMenuItem.Text = "REST";
+            this.llegirRESTMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.llegirRESTMenuItem.Text = "Petició REST";
             this.llegirRESTMenuItem.Click += new System.EventHandler(this.llegirRESTMenuItem_Click);
             // 
-            // llegirFDMenuItem
+            // MostrarJugadorsMenuItem
             // 
-            this.llegirFDMenuItem.Name = "llegirFDMenuItem";
-            this.llegirFDMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.llegirFDMenuItem.Text = "FirebaseDatabase";
-            this.llegirFDMenuItem.Click += new System.EventHandler(this.llegirFDMenuItem_Click);
+            this.MostrarJugadorsMenuItem.Name = "MostrarJugadorsMenuItem";
+            this.MostrarJugadorsMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.MostrarJugadorsMenuItem.Text = "Mostrar jugadors";
+            this.MostrarJugadorsMenuItem.Click += new System.EventHandler(this.MostrarJugadorsMenuItem_Click);
             // 
             // escripturaToolStripMenuItem
             // 
             this.escripturaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.insertFDMenuItem,
-            this.modificarFDMenuItem});
+            this.modificarFDMenuItem,
+            this.eliminarFDMenuItem});
             this.escripturaToolStripMenuItem.Name = "escripturaToolStripMenuItem";
             this.escripturaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.escripturaToolStripMenuItem.Text = "Escriptura";
@@ -84,16 +86,23 @@
             // insertFDMenuItem
             // 
             this.insertFDMenuItem.Name = "insertFDMenuItem";
-            this.insertFDMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.insertFDMenuItem.Size = new System.Drawing.Size(152, 22);
             this.insertFDMenuItem.Text = "Insert";
             this.insertFDMenuItem.Click += new System.EventHandler(this.insertFDMenuItem_Click);
             // 
             // modificarFDMenuItem
             // 
             this.modificarFDMenuItem.Name = "modificarFDMenuItem";
-            this.modificarFDMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarFDMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modificarFDMenuItem.Text = "Modificar";
             this.modificarFDMenuItem.Click += new System.EventHandler(this.modificarFDMenuItem_Click);
+            // 
+            // eliminarFDMenuItem
+            // 
+            this.eliminarFDMenuItem.Name = "eliminarFDMenuItem";
+            this.eliminarFDMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarFDMenuItem.Text = "Eliminar";
+            this.eliminarFDMenuItem.Click += new System.EventHandler(this.eliminarFDMenuItem_Click);
             // 
             // MainForm
             // 
@@ -116,10 +125,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fitxerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem llegirRESTMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem llegirFDMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MostrarJugadorsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escripturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insertFDMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarFDMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarFDMenuItem;
     }
 }
 
