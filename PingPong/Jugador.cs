@@ -3,21 +3,23 @@ using System.Runtime.Serialization;
 
 namespace PingPong
 {
-    [DataContract]
     class Jugador
     {
-        [DataMember]
+        public String Id { get; set; }
         public String Nom { get; set; }
-        [DataMember]
         public String Foto { get; set; }
-        [DataMember]
         public int Punts { get; set; }
-        [DataMember]
         public int Jugats { get; set; }
+
+        public Jugador(String nom, String foto)
+        {
+            Nom = nom;
+            Foto = foto;
+        }
 
         public override String ToString()
         {
-            return Nom + "/" + Foto + "/" + Punts + "/" + Jugats;
+            return Id + "/" + Nom + "/" + Foto + "/" + Punts + "/" + Jugats;
         }
     }
 }
