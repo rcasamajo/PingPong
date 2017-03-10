@@ -22,7 +22,10 @@ namespace PingPong
 
         public Jugador getJugador(int i)
         {
-            return Jugadors[i];
+            if (i < Jugadors.Count)
+                return Jugadors[i];
+            else
+                return null;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace PingPong
 
         public override String ToString()
         {
-            return Id + "/" + Nom + "/" + Foto + "/" + Punts + "/" + Jugats;
+            return Id + " / " + Nom + " / " + Foto + " / " + Punts + " / " + Jugats;
         }
     }
 }

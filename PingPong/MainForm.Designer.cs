@@ -30,10 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fitxerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firebasedatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.llegirRESTMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.llegirFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.escripturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firebaseDatabaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,40 +52,48 @@
             // fitxerToolStripMenuItem
             // 
             this.fitxerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
-            this.firebasedatabaseToolStripMenuItem});
+            this.llegirRESTMenuItem,
+            this.llegirFDMenuItem});
             this.fitxerToolStripMenuItem.Name = "fitxerToolStripMenuItem";
             this.fitxerToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.fitxerToolStripMenuItem.Text = "Lectura";
             // 
-            // testToolStripMenuItem
+            // llegirRESTMenuItem
             // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.testToolStripMenuItem.Text = "DataContractJsonSerializer";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            this.llegirRESTMenuItem.Name = "llegirRESTMenuItem";
+            this.llegirRESTMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.llegirRESTMenuItem.Text = "REST";
+            this.llegirRESTMenuItem.Click += new System.EventHandler(this.llegirRESTMenuItem_Click);
             // 
-            // firebasedatabaseToolStripMenuItem
+            // llegirFDMenuItem
             // 
-            this.firebasedatabaseToolStripMenuItem.Name = "firebasedatabaseToolStripMenuItem";
-            this.firebasedatabaseToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.firebasedatabaseToolStripMenuItem.Text = "FirebaseDatabase";
-            this.firebasedatabaseToolStripMenuItem.Click += new System.EventHandler(this.firebasedatabaseToolStripMenuItem_Click);
+            this.llegirFDMenuItem.Name = "llegirFDMenuItem";
+            this.llegirFDMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.llegirFDMenuItem.Text = "FirebaseDatabase";
+            this.llegirFDMenuItem.Click += new System.EventHandler(this.llegirFDMenuItem_Click);
             // 
             // escripturaToolStripMenuItem
             // 
             this.escripturaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.firebaseDatabaseToolStripMenuItem1});
+            this.insertFDMenuItem,
+            this.modificarFDMenuItem});
             this.escripturaToolStripMenuItem.Name = "escripturaToolStripMenuItem";
             this.escripturaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.escripturaToolStripMenuItem.Text = "Escriptura";
             // 
-            // firebaseDatabaseToolStripMenuItem1
+            // insertFDMenuItem
             // 
-            this.firebaseDatabaseToolStripMenuItem1.Name = "firebaseDatabaseToolStripMenuItem1";
-            this.firebaseDatabaseToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
-            this.firebaseDatabaseToolStripMenuItem1.Text = "FirebaseDatabase";
-            this.firebaseDatabaseToolStripMenuItem1.Click += new System.EventHandler(this.firebaseDatabaseToolStripMenuItem1_Click);
+            this.insertFDMenuItem.Name = "insertFDMenuItem";
+            this.insertFDMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.insertFDMenuItem.Text = "Insert";
+            this.insertFDMenuItem.Click += new System.EventHandler(this.insertFDMenuItem_Click);
+            // 
+            // modificarFDMenuItem
+            // 
+            this.modificarFDMenuItem.Name = "modificarFDMenuItem";
+            this.modificarFDMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarFDMenuItem.Text = "Modificar";
+            this.modificarFDMenuItem.Click += new System.EventHandler(this.modificarFDMenuItem_Click);
             // 
             // MainForm
             // 
@@ -106,10 +115,11 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fitxerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem firebasedatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem llegirRESTMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem llegirFDMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escripturaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem firebaseDatabaseToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem insertFDMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarFDMenuItem;
     }
 }
 
