@@ -86,21 +86,21 @@
             // insertFDMenuItem
             // 
             this.insertFDMenuItem.Name = "insertFDMenuItem";
-            this.insertFDMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.insertFDMenuItem.Size = new System.Drawing.Size(125, 22);
             this.insertFDMenuItem.Text = "Insert";
             this.insertFDMenuItem.Click += new System.EventHandler(this.insertFDMenuItem_Click);
             // 
             // modificarFDMenuItem
             // 
             this.modificarFDMenuItem.Name = "modificarFDMenuItem";
-            this.modificarFDMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarFDMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarFDMenuItem.Text = "Modificar";
             this.modificarFDMenuItem.Click += new System.EventHandler(this.modificarFDMenuItem_Click);
             // 
             // eliminarFDMenuItem
             // 
             this.eliminarFDMenuItem.Name = "eliminarFDMenuItem";
-            this.eliminarFDMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarFDMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarFDMenuItem.Text = "Eliminar";
             this.eliminarFDMenuItem.Click += new System.EventHandler(this.eliminarFDMenuItem_Click);
             // 

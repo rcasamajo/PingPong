@@ -17,6 +17,13 @@ namespace PingPong
 
             LligaActual = new Lliga();
             llegirFDAsync();
+
+            var firebase = new FirebaseClient("https://pingpong-f6fb0.firebaseio.com/");
+
+            var observable = firebase
+                .Child("jugadors")
+                .AsObservable<Jugador>()
+                .Subscribe(d => Console.WriteLine(d.Key + d.Object));
         }
 
         // Lectura dels jugadors usant la API de C# per a Firebase.
