@@ -36,6 +36,7 @@
             this.insertFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbMissatge = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.escripturaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(402, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(455, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,11 +105,19 @@
             this.eliminarFDMenuItem.Text = "Eliminar";
             this.eliminarFDMenuItem.Click += new System.EventHandler(this.eliminarFDMenuItem_Click);
             // 
+            // tbMissatge
+            // 
+            this.tbMissatge.Location = new System.Drawing.Point(12, 157);
+            this.tbMissatge.Name = "tbMissatge";
+            this.tbMissatge.Size = new System.Drawing.Size(406, 20);
+            this.tbMissatge.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 343);
+            this.ClientSize = new System.Drawing.Size(455, 343);
+            this.Controls.Add(this.tbMissatge);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -130,6 +139,7 @@
         private System.Windows.Forms.ToolStripMenuItem insertFDMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarFDMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarFDMenuItem;
+        private System.Windows.Forms.TextBox tbMissatge;
     }
 }
 

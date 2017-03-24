@@ -4,12 +4,15 @@ using System.Net;
 using System.Windows.Forms;
 using Firebase.Database;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace PingPong
 {
     public partial class MainForm : Form
     {
         private Lliga LligaActual;
+        private Thread fil;
+        private String msg;
 
         public MainForm()
         {
@@ -18,12 +21,43 @@ namespace PingPong
             LligaActual = new Lliga();
             llegirFDAsync();
 
+
+            // Per sincronitzar amb Firebase
             var firebase = new FirebaseClient("https://pingpong-f6fb0.firebaseio.com/");
 
             var observable = firebase
                 .Child("jugadors")
                 .AsObservable<Jugador>()
-                .Subscribe(d => Console.WriteLine(d.Key + d.Object));
+                .Subscribe(d => { Console.WriteLine(d.Key + d.Object);
+                    this.msg = d.Key + d.Object;
+
+                    fil = new Thread(new ThreadStart(ThreadProcSafe));
+                    fil.Start();
+                });
+        }
+
+        // Per accedor a la GUI de forma segura des d'un altre thread
+        private void ThreadProcSafe()
+        {
+            this.SetText(this.msg);
+        }
+
+        delegate void SetTextCallback(string text);
+
+        private void SetText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.tbMissatge.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.tbMissatge.Text = text;
+            }
         }
 
         // Lectura dels jugadors usant la API de C# per a Firebase.
