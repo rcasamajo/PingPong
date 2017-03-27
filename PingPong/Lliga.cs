@@ -39,7 +39,7 @@ namespace PingPong
             String msg = "";
 
             foreach (Jugador jug in Jugadors)
-                msg = msg + jug.ToString() + "\n";
+                msg = msg + jug.ToString() + Environment.NewLine;
 
             return msg;
         }

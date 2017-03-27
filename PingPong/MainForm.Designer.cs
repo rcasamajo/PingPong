@@ -107,9 +107,15 @@
             // 
             // tbMissatge
             // 
-            this.tbMissatge.Location = new System.Drawing.Point(12, 157);
+            this.tbMissatge.AcceptsReturn = true;
+            this.tbMissatge.AcceptsTab = true;
+            this.tbMissatge.AllowDrop = true;
+            this.tbMissatge.Enabled = false;
+            this.tbMissatge.Location = new System.Drawing.Point(12, 47);
+            this.tbMissatge.Multiline = true;
             this.tbMissatge.Name = "tbMissatge";
-            this.tbMissatge.Size = new System.Drawing.Size(406, 20);
+            this.tbMissatge.ReadOnly = true;
+            this.tbMissatge.Size = new System.Drawing.Size(431, 284);
             this.tbMissatge.TabIndex = 1;
             // 
             // MainForm

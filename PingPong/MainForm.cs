@@ -12,7 +12,6 @@ namespace PingPong
     {
         private Lliga LligaActual;
         private Thread fil;
-        private String msg;
 
         public MainForm()
         {
@@ -28,20 +27,12 @@ namespace PingPong
             var observable = firebase
                 .Child("jugadors")
                 .AsObservable<Jugador>()
-                .Subscribe(d => { Console.WriteLine(d.Key + d.Object);
-                    this.msg = d.Key + d.Object;
-
-                    fil = new Thread(new ThreadStart(ThreadProcSafe));
-                    fil.Start();
+                .Subscribe(d => {
+                    this.SetText(d.EventType + ": " + d.Key + d.Object);
                 });
         }
 
-        // Per accedor a la GUI de forma segura des d'un altre thread
-        private void ThreadProcSafe()
-        {
-            this.SetText(this.msg);
-        }
-
+        // Per accedor a la GUI de forma, usem el mètode Invoke per a accedir-hi des del thread que l'ha creat.
         delegate void SetTextCallback(string text);
 
         private void SetText(string text)
@@ -56,7 +47,7 @@ namespace PingPong
             }
             else
             {
-                this.tbMissatge.Text = text;
+                this.tbMissatge.Text = this.tbMissatge.Text + text + Environment.NewLine;
             }
         }
 
