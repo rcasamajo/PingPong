@@ -28,6 +28,8 @@ namespace PingPong
                 .Child("jugadors")
                 .AsObservable<Jugador>()
                 .Subscribe(d => {
+                    // Quan hi ha un canvi a Firebase es crida aquest codi
+                    // Al objecte d rebem la info de la operació realitzada
                     this.SetText(d.EventType + ": " + d.Key + d.Object);
                 });
         }
@@ -50,6 +52,10 @@ namespace PingPong
                 this.tbMissatge.Text = this.tbMissatge.Text + text + Environment.NewLine;
             }
         }
+
+
+
+
 
         // Lectura dels jugadors usant la API de C# per a Firebase.
         private async Task llegirFDAsync()
