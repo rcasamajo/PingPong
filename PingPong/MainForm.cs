@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Firebase.Database;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Drawing;
 
 namespace PingPong
 {
@@ -32,6 +33,8 @@ namespace PingPong
                     // Al objecte d rebem la info de la operació realitzada
                     this.SetText(d.EventType + ": " + d.Key + d.Object);
                 });
+
+            pictureBox1.Image = PingPong.Properties.Resources.logo_marge;
         }
 
         // Per accedor a la GUI de forma, usem el mètode Invoke per a accedir-hi des del thread que l'ha creat.

@@ -37,7 +37,9 @@
             this.modificarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarFDMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbMissatge = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -111,18 +113,28 @@
             this.tbMissatge.AcceptsTab = true;
             this.tbMissatge.AllowDrop = true;
             this.tbMissatge.Enabled = false;
-            this.tbMissatge.Location = new System.Drawing.Point(12, 47);
+            this.tbMissatge.Location = new System.Drawing.Point(12, 99);
             this.tbMissatge.Multiline = true;
             this.tbMissatge.Name = "tbMissatge";
             this.tbMissatge.ReadOnly = true;
-            this.tbMissatge.Size = new System.Drawing.Size(431, 284);
+            this.tbMissatge.Size = new System.Drawing.Size(431, 309);
             this.tbMissatge.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(343, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 343);
+            this.ClientSize = new System.Drawing.Size(455, 420);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbMissatge);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -130,6 +142,7 @@
             this.Text = "Ping-Pong Poblenou";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +159,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarFDMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarFDMenuItem;
         private System.Windows.Forms.TextBox tbMissatge;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
