@@ -14,19 +14,22 @@ namespace PingPong.Tests
         [TestMethod()]
         public void LligaTest()
         {
-            Assert.Fail();
         }
 
         [TestMethod()]
-        public void NouJugadorTest()
+        public void getJugadorTest_ForaRang()
         {
-            Assert.Fail();
+            Lliga lliga = new Lliga();
+            Jugador jugador = lliga.getJugador(0);
+            Assert.AreEqual(jugador, null);
         }
 
         [TestMethod()]
-        public void getJugadorTest()
+        public void getJugadorTest_Negatiu()
         {
-            Assert.Fail();
+            Lliga lliga = new Lliga();
+            Jugador jugador = lliga.getJugador(-1);
+            Assert.AreEqual(jugador, null);
         }
 
         [TestMethod()]
