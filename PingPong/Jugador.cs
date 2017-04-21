@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 
 namespace PingPong
 {
-    class Jugador
+    public class Jugador
     {
         [JsonIgnore] //Aquest camp no es serialitza
         public String Id { get; set; }

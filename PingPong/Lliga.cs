@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PingPong
 {
-    class Lliga
+    public class Lliga
     {
         private List<Jugador> Jugadors;
 
